@@ -12,27 +12,38 @@ import {stack as Menu } from 'react-burger-menu';
 
 
         return (
+          <div className="container">
+              <Menu styles={styles}>
+                        <a id="home" className="menu-item" href="/">Home</a>
+                        <a id="about" className="menu-item" href="#about">About</a>
+                        <a id="contact" className="menu-item" href="/contact">Contact</a>
+                        
+                    </Menu> 
+
              <Parallax ref="parallax" pages={3}>
                  <Parallax.Layer
                     offset={0}
                     speed={0.5}
                     >
-                    <Menu styles={styles}>
-                        <a id="home" className="menu-item" href="/">Home</a>
-                        <a id="about" className="menu-item" href="/about">About</a>
-                        <a id="contact" className="menu-item" href="/contact">Contact</a>
-                        
-                    </Menu>
+                    
                 </Parallax.Layer>   
 
-                <Parallax.Layer>
-
+                <Parallax.Layer
+                  offset={.75}
+                  speed={1}
+                >
+                  <div classID="about">about</div>
                 </Parallax.Layer> 
 
-                <Parallax.Layer>
+                <Parallax.Layer
+                  offset={1.25}
+                  speed={1}
+                >
+                  <div>Bye</div>
                 </Parallax.Layer>    
 
-            </Parallax>      
+            </Parallax>  
+           </div>     
                     
         ); 
     }
