@@ -12,12 +12,7 @@ import {stack as Menu } from 'react-burger-menu';
 
 
         return (
-
-
-
-           
-             <Parallax ref='parallax' pages={3}>
-
+             <Parallax ref="parallax" pages={3}>
                  <Parallax.Layer
                     offset={0}
                     speed={0.5}
@@ -28,10 +23,16 @@ import {stack as Menu } from 'react-burger-menu';
                         <a id="contact" className="menu-item" href="/contact">Contact</a>
                         
                     </Menu>
-                     
-                 </Parallax.Layer>    
+                </Parallax.Layer>   
 
-             </Parallax>      
+                <Parallax.Layer>
+
+                </Parallax.Layer> 
+
+                <Parallax.Layer>
+                </Parallax.Layer>    
+
+            </Parallax>      
                     
         ); 
     }
@@ -56,14 +57,13 @@ let styles = {
     background: '#bdc3c7'
   },
   bmMenu: {
-    background: '#373a47',
+    background: '#18213A',
     padding: '2.5em 1.5em 0',
-    fontSize: '1.15em'
-  },
-  bmMorphShape: {
-    fill: '#373a47'
+    fontSize: '1.25em',
+    color: 'grey'
   },
   bmItemList: {
+    textDecoration: 'none',
     color: '#b8b7ad',
     padding: '0.8em'
   },
