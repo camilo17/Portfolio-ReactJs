@@ -1,8 +1,7 @@
 import React , {Component} from 'react';
 import ReactDOM from 'react-dom'; 
-import {hashHistory, Route, Router } from 'react-router'; 
 
-import Home from './components/Home'
+import Home from './components/Home'; 
 
 
 class App extends Component {
@@ -13,9 +12,7 @@ class App extends Component {
 
     render() {
         return (
-            <Router history={hashHistory}>
-                <Route path="/" component={Home}/>
-            </Router>    
+            <Home/>
 
         ); 
     }
