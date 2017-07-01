@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Parallax from 'react-springy-parallax';  
 import {stack as Menu } from 'react-burger-menu'; 
 
+import firstImage from '../images/pexels-photo-410981.jpeg';
+
  class Home extends Component {
     constructor(props) {
         super(props);
@@ -24,6 +26,7 @@ import {stack as Menu } from 'react-burger-menu';
                  <Parallax.Layer
                     offset={0}
                     speed={0.5}
+                    style={firstParllaxStyle}
                     >
                     
                 </Parallax.Layer>   
@@ -81,6 +84,12 @@ let styles = {
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'
   }
+}; 
+
+let firstParllaxStyle = {
+  width: "3000px",
+  height: "100%",
+  backgroundImage: `url(${firstImage})`
 }; 
 
 export default Home; 
