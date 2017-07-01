@@ -9,9 +9,31 @@ class Skills extends Component {
 
     render(){
         return (
-            <div>Muh skills</div>
-        )
+            <Flight>
+                <Flight.Frame duration={100} source>
+                    <Rect
+                        name="head-1"
+                        radius={5}
+                        style={style}
+                    
+                    
+                    
+                    
+                    />    
+
+                </Flight.Frame>    
+            </Flight>    
+           
+        ); 
     }
 }
+
+let style = {
+    backgroundColor: 'red',
+    left: 30,
+    top: 20,
+    width: 50,
+    height: 10
+};
 
 export default Skills; 
