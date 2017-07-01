@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {jquery as $} from 'jquery'; 
+import Flight, { Rect } from 'react-flight/dom'; 
 
 class Skills extends Component {
     constructor(props){
@@ -12,3 +13,5 @@ class Skills extends Component {
         )
     }
 }
+
+export default Skills; 
