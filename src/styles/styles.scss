@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
 $text-color: #B1B6C9;
 
 a.menu-item {
@@ -10,12 +12,24 @@ a.menu-item:hover {
     color: purple; 
 }
 
-.image-container {
-    background-image: url('../images/pexels-photo-410981.jpeg');
-    height: 50%; 
-}   
+.first-image-container {
+    background-image: url('../images/pexels-photo-94723.jpeg');
+    height: 75%; 
+    
+}  
 
+.second-image-container {
+    background-image: url('../images/pexels-photo-410981.jpeg'); 
+} 
 
+.top {
+    padding-top: 150px; 
+}
 
+button {
+    align-content: center; 
+    margin-left: 500px; 
+    margin-top: 250px; 
+}
 
 

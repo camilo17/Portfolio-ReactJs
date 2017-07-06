@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import Parallax from 'react-springy-parallax';  
 import {stack as Menu } from 'react-burger-menu'; 
 import Skills from './Skills'; 
+import Welcome from '../components/Welcome'; 
 
 
-import firstImage from '../images/pexels-photo-410981.jpeg';
+
 
  class Home extends Component {
     constructor(props) {
@@ -16,7 +17,7 @@ import firstImage from '../images/pexels-photo-410981.jpeg';
 
 
         return (
-          <div className="container">
+          <div className="outer-container">
               <Menu styles={styles}>
                         <a id="home" className="menu-item" href="/">Home</a>
                         <a id="about" className="menu-item" href="#about">About</a>
@@ -26,25 +27,32 @@ import firstImage from '../images/pexels-photo-410981.jpeg';
                     </Menu> 
 
              <Parallax ref="parallax" pages={3}>
-
-                 <Parallax.Layer
-                    offset={0}
-                    speed={0.5}
-                    className="image-container"
-                    >
-                    
-                </Parallax.Layer>   
-
+                 
+                  <Parallax.Layer
+                      offset={0}
+                      speed={1}
+                      className="first-image-container"
+                      >
+                      <Welcome/>
+                      <button
+                        onClick={() => this.refs.parallax.scrollTo(1)}   
+                        name="next"   
+                        className="btn btn-primary"                
+                      >Next</button>
+                      
+                  </Parallax.Layer> 
+                
                 <Parallax.Layer
-                  offset={.75}
+                  offset={1}
                   speed={1}
+                  className="second-image-container"
                 >
                   <Skills/>
                   
                 </Parallax.Layer> 
 
                 <Parallax.Layer
-                  offset={1.25}
+                  offset={2}
                   speed={1}
                 >
                   <div>Bye</div>
@@ -76,7 +84,7 @@ let styles = {
     background: '#bdc3c7'
   },
   bmMenu: {
-    background: '#18213A',
+    background: '#7b6492',
     padding: '2.5em 1.5em 0',
     fontSize: '1.25em',
     color: 'grey'

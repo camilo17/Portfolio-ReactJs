@@ -50,7 +50,9 @@ export default {
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
-      jQuery: "jquery"
+      jQuery: "jquery",
+      'window.jQuery': 'jquery',
+      Tether: 'tether'
     })
   ],
   module: {
