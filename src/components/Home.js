@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Parallax from 'react-springy-parallax';  
 import {stack as Menu } from 'react-burger-menu'; 
+import Skills from './Skills'; 
+
 
 import firstImage from '../images/pexels-photo-410981.jpeg';
 
@@ -19,14 +21,16 @@ import firstImage from '../images/pexels-photo-410981.jpeg';
                         <a id="home" className="menu-item" href="/">Home</a>
                         <a id="about" className="menu-item" href="#about">About</a>
                         <a id="contact" className="menu-item" href="/contact">Contact</a>
-                        
+                        <a id="gihub" className="menu-item" href="/contact">Github</a>
+                        <a id="kata" className="menu-item" href="/contact">Skills</a>
                     </Menu> 
 
              <Parallax ref="parallax" pages={3}>
+
                  <Parallax.Layer
                     offset={0}
                     speed={0.5}
-                    style={firstParllaxStyle}
+                    className="image-container"
                     >
                     
                 </Parallax.Layer>   
@@ -35,7 +39,8 @@ import firstImage from '../images/pexels-photo-410981.jpeg';
                   offset={.75}
                   speed={1}
                 >
-                  <div classID="about">about</div>
+                  <Skills/>
+                  
                 </Parallax.Layer> 
 
                 <Parallax.Layer
@@ -86,11 +91,7 @@ let styles = {
   }
 }; 
 
-let firstParllaxStyle = {
-  width: "3000px",
-  height: "100%",
-  backgroundImage: `url(${firstImage})`
-}; 
+
 
 export default Home; 
 

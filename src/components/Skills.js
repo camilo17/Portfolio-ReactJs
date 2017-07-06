@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {jquery as $} from 'jquery'; 
+global.jquery = require('jquery'); 
 import Flight, { Rect } from 'react-flight/dom'; 
 
 class Skills extends Component {
@@ -9,17 +9,27 @@ class Skills extends Component {
 
     render(){
         return (
-            <Flight>
-                <Flight.Frame duration={100} source>
+            <Flight interactive ref={flight => (this.flight = flight)}>
+                <Flight.Frame source duration={100} showFrames >
+                    <div className="keyframe">
                     <Rect
                         name="head-1"
                         radius={5}
                         style={style}
                     
-                    
-                    
-                    
-                    />    
+                    /> 
+                    <Rect
+                        name="head-2"
+                        radius={5}
+                        style={{
+                            backgroundColor: '#E6ECF0',
+                            left: 120 - 15,
+                            top: 20,
+                            width: 120,
+                            height: 10,
+                        }}
+                    /> 
+                    </div>  
 
                 </Flight.Frame>    
             </Flight>    
